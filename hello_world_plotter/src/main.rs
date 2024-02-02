@@ -20,6 +20,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .legend(|(x, y)| PathElement::new(vec![(x, y), (x + 20, y)], &RED));
 
     chart
+        .draw_series(LineSeries::new(
+            (-10..=10).map(|x| x as f32 / 50.0).map(|x| (x, -x * x)),
+            &GREEN,
+        ))?
+        .label("y = x^2 #2")
+        .legend(|(x, y)| PathElement::new(vec![(x, y), (x + 20, y)], &GREEN));
+
+    chart
         .configure_series_labels()
         .background_style(&WHITE.mix(0.8))
         .border_style(&BLACK)

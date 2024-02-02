@@ -1,2 +1,2 @@
 format:
-	rustfmt rsty_physics/src/*.rs
+	rustfmt hello_world_plotter/src/*.rs
