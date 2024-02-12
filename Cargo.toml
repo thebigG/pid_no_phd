@@ -1,5 +1,5 @@
 [workspace]
 
 members = [
-    "hello_world_plotter",
+    "hello_world_plotter", "proportional",
 ]
